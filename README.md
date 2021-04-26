@@ -2,7 +2,7 @@
 
 
 <h2>gremlin</h2>
-
+  <code>
   include "./config.php";
   login_chk();
   $db = dbconnect();
@@ -13,3 +13,4 @@
   $result = @mysqli_fetch_array(mysqli_query($db,$query));
   if($result['id']) solve("gremlin");
   highlight_file(__FILE__);
+  </code>
