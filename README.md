@@ -28,7 +28,7 @@
   echo "query:{$query}"; 
   $result = @mysqli_fetch_array(mysqli_query($db,$query)); 
   if($result['id'] == 'admin') solve("cobolt");
-  elseif($result['id']) echo "<h2>Hello {$result['id']}<br>You are not admin :(</h2>"; 
+  elseif($result['id']) echo "Hello {$result['id']}You are not admin :("; 
   highlight_file(__FILE__); 
   ?>
  </code></pre>
@@ -45,7 +45,7 @@
   $query = "select id from prob_goblin where id='guest' and no={$_GET[no]}"; 
   echo "query : {$query}"; 
   $result = @mysqli_fetch_array(mysqli_query($db,$query)); 
-  if($result['id']) echo "<h2>Hello {$result[id]}</h2>"; 
+  if($result['id']) echo "Hello {$result[id]}"; 
   if($result['id'] == 'admin') solve("goblin");
   highlight_file(__FILE__); 
   ?>
